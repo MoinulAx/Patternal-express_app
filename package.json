@@ -8,7 +8,10 @@
     "test": "jest",
     "db:init": "psql -U postgres -f db/schema.sql",
     "db:trig": "psql -U postgres -f db/triggers.sql",
-    "db:seed": "psql -U postgres -f db/seed.sql"
+    "db:seed": "psql -U postgres -f db/seed.sql",
+    "_run-deploy": "psql $DEPLOYED_DB -f db/schemaDeploy.sql -f db/triggerDeploy.sql -f db/seedDeploy.sql -f ",
+    "deploy-setup": "dotenv -- npm run _run-deploy"
+
   },
   "keywords": [],
   "author": " Moinul Khan",
