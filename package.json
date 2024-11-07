@@ -11,7 +11,6 @@
     "db:seed": "psql -U postgres -f db/seed.sql",
     "_run-deploy": "psql $DEPLOYED_DB -f db/schemaDeploy.sql -f db/triggerDeploy.sql -f db/seedDeploy.sql -f ",
     "deploy-setup": "dotenv -- npm run _run-deploy"
-
   },
   "keywords": [],
   "author": " Moinul Khan",
@@ -22,6 +21,7 @@
     "chai": "^4.3.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "pg-promise": "^11.9.1",
